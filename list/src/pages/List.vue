@@ -135,7 +135,7 @@ export default {
     addUser: function () {
       if (this.valid) {
         this.names.push({
-          id: this.names.length + 1,
+          id: this.names[this.names.length-1].id + 1,
           first_name: this.new_name,
           last_name: this.new_sec_name,
           email: this.new_email,
@@ -223,6 +223,7 @@ export default {
       margin: 10px 20px;
       border-radius: 8px;
       box-shadow: 0 0 5px #929292;
+      max-width: 128px;
     }
 
     .user__text {
